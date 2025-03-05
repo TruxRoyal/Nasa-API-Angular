@@ -1,0 +1,9 @@
+export const environment = {
+  production: false,
+  nasaApiKey: 'TU_API_KEY_AQUÍ',
+  apiUrls: {
+        apod: 'https://api.nasa.gov/planetary/apod',
+        neows: 'https://api.nasa.gov/neo/rest/v1/feed',
+        earth: 'https://api.nasa.gov/planetary/earth/imagery'
+      }
+};

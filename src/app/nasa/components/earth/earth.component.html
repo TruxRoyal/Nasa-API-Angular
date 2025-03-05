@@ -1,0 +1,21 @@
+<div class="container">
+    <h1> Imágenes Satelitales de la Tierra</h1>
+
+    <div class="form-container">
+        <label for="lat">Latitud:</label>
+        <input id="lat" type="number" [(ngModel)]="lat" step="0.01" placeholder="Ej: 29.78" required>
+
+        <label for="lon">Longitud:</label>
+        <input id="lon" type="number" [(ngModel)]="lon" step="0.01" placeholder="Ej: -95.33" required>
+
+        <label for="date">Fecha:</label>
+        <input id="date" type="date" [(ngModel)]="date">
+
+        <button (click)="obtenerImagenTierra()">Obtener Imagen</button>
+    </div>
+
+    <div class="image-container" *ngIf="earthImageUrl">
+        <h2>🛰️ Imagen Satelital</h2>
+        <img [src]="earthImageUrl"  width="700" alt="Satelital de la Tierra">
+    </div>
+</div>
